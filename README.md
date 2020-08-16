@@ -1,6 +1,6 @@
 # Johnson's Personal Website - Showcasing your best self
 
-Personal portfolio website to showcase my previous projects, key recruitment information and programming skills. To view presentation slides, click on Johnson's-website-slides.pdf to view more. 
+Personal portfolio website to showcase my previous projects, key recruitment information and programming skills. To view presentation slides, click on **Johnson's-website-slides.pdf** to view more. 
 
 ## Use guide
 
@@ -11,8 +11,10 @@ Visit: https://johnson-website.herokuapp.com/
 ### Use locally
 
 Run the following commands via terminal:<br/>
-`git clone https://github.com/johnsonchau7/johnson-website.git`<br/>
-`cd johnson-website`<br/>
-`npm start`<br/>
+```
+git clone https://github.com/johnsonchau7/johnson-website.git
+cd johnson-website
+npm start
+```
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
