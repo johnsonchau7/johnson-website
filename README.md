@@ -10,9 +10,9 @@ Visit: https://johnson-website.herokuapp.com/
 
 ### Use locally
 
-Run the following commands via terminal:
-`git clone https://github.com/johnsonchau7/johnson-website.git`
-`cd johnson-website`
-`npm start`
+Run the following commands via terminal:<br/>
+`git clone https://github.com/johnsonchau7/johnson-website.git`<br/>
+`cd johnson-website`<br/>
+`npm start`<br/>
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
