@@ -27,6 +27,7 @@ export default function ProjectPage(){
   const classes = useStyles();
 
     return (
+      /*More about me*/
       <CardActions className={classes.center}>
         <Card className={classes.root}>
           <CardActionArea>

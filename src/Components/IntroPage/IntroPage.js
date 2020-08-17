@@ -58,16 +58,19 @@ export default function IntroPage() {
 
   return (
     <div>
+      {/*profile picture*/}
       <CardActions classes={{root: button_classes.root}}>
         <Avatar className={button_classes.large} src="profile_pic.png" />
       </CardActions>
 
+      {/*name*/}
       <CardActions classes={{root: button_classes.root}}>
         <Typography variant="h4">
           Johnson Chau
         </Typography>
       </CardActions>
 
+      {/*bio*/}
       <CardActions classes={{root: button_classes.root}}>
         <Card className={button_classes.bio}>
           <CardContent>
@@ -78,6 +81,7 @@ export default function IntroPage() {
         </Card>
       </CardActions>
 
+      {/*more about me*/}
       <CardActions className={button_classes.chipssection}>
         <Card className={button_classes.description}>
           <CardHeader
@@ -97,6 +101,7 @@ export default function IntroPage() {
         </Card>
       </CardActions>
 
+      {/*key documents and links*/}
       <CardActions classes={{root: button_classes.root}}>
         <Button className={button_classes.button} variant="outlined" fullWidth="false" href="Johnson_Chau_CV.pdf" target="_blank" >Resume</Button>
         <Button className={button_classes.button} variant="outlined" href="Johnson_Chau_Academic_Transcript.pdf" target="_blank">Academic Transcript</Button>
