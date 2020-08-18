@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
 import Chip from '@material-ui/core/Chip';
 import Typography from '@material-ui/core/Typography';
+import Icon from '@material-ui/core/Icon';
 import {makeStyles} from "@material-ui/core/styles";
 
 import './IntroPage.css'
@@ -14,7 +15,8 @@ import './IntroPage.css'
 const useStyles = makeStyles((theme) =>({
   button: {
     textTransform: "none",
-    width: 170,
+    minWidth: 170,
+    maxWidth: 170,
     marginTop: 20,
     margin: theme.spacing(5),
     marginBottom: 20,
@@ -40,17 +42,31 @@ const useStyles = makeStyles((theme) =>({
     textAlign: 'center',
   },
   chips: {
-    marginTop: 20,
-    margin: theme.spacing(3),
-    marginBottom: 20,
     justifyContent: 'center',
     minWidth: 130,
     maxWidth: 130,
   },
   chipssection: {
     justifyContent: 'space-evenly',
-  }
-
+  },
+  iconsize: {
+    fontSize: 55,
+    textAlign: 'center',
+    minWidth: 130,
+    maxWidth: 130,
+  },
+  iconchip: {
+    minWidth: 130,
+    maxWidth: 130,
+    marginTop: 0,
+    margin: theme.spacing(3),
+    marginBottom: 10,
+  },
+  iconchipsection: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
 }));
 
 export default function IntroPage() {
@@ -83,21 +99,72 @@ export default function IntroPage() {
 
       {/*more about me*/}
       <CardActions className={button_classes.chipssection}>
+        {/*Personality*/}
         <Card className={button_classes.description}>
           <CardHeader
             title="Personality" className={button_classes.centertext}
           />
-          <Chip className={button_classes.chips} label="Team Player" clickable/>
-          <Chip className={button_classes.chips} label="Communicator" clickable/>
-          <Chip className={button_classes.chips} label="Curious" clickable/>
+          <div className={button_classes.iconchipsection}>
+            <div className={button_classes.iconchip}>
+              <div>
+                <Icon className={button_classes.iconsize}>groups</Icon>
+              </div>
+              <div>
+                <Chip className={button_classes.chips}label="Team Player" clickable/>
+              </div>
+            </div>
+            <div className={button_classes.iconchip}>
+              <div>
+                <Icon className={button_classes.iconsize}>mood</Icon>
+              </div>
+              <div>
+                <Chip className={button_classes.chips}label="Communicator" clickable/>
+              </div>
+            </div>
+            <div className={button_classes.iconchip}>
+              <div>
+                <Icon className={button_classes.iconsize}>school</Icon>
+              </div>
+              <div>
+                <Chip className={button_classes.chips}label="Learner" clickable/>
+              </div>
+            </div>
+          </div>
         </Card>
+
+        {/*Skills*/}
         <Card className={button_classes.description}>
           <CardHeader
             title="Skills" className={button_classes.centertext}
           />
-          <Chip className={button_classes.chips} label="Python" clickable/>
-          <Chip className={button_classes.chips} label="Java" clickable/>
-          <Chip className={button_classes.chips} label="C" clickable/>
+
+          <div className={button_classes.iconchipsection}>
+            <div className={button_classes.iconchip}>
+              <div>
+                <Icon className={button_classes.iconsize}>text_snippet</Icon>
+              </div>
+              <div>
+                <Chip className={button_classes.chips}label="Python" clickable/>
+              </div>
+            </div>
+            <div className={button_classes.iconchip}>
+              <div>
+                <Icon className={button_classes.iconsize}>computer</Icon>
+              </div>
+              <div>
+                <Chip className={button_classes.chips}label="Java" clickable/>
+              </div>
+            </div>
+            <div className={button_classes.iconchip}>
+              <div>
+                <Icon className={button_classes.iconsize}>developer_board</Icon>
+              </div>
+              <div>
+                <Chip className={button_classes.chips}label="C" clickable/>
+              </div>
+            </div>
+          </div>
+
         </Card>
       </CardActions>
 
