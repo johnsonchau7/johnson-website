@@ -7,22 +7,40 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles({
-  root: {
-    minWidth: 420,
-    maxWidth: 420,
-    minHeight: 400,
-    maxHeight: 400,
-    padding: 20,
-
+  mainmedia: {
+    height: 350,
   },
-  media: {
+  maincardcontent: {
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  maincarddescription: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    maxWidth: 400,
+  },
+  mainbutton: {
+    paddingLeft: 9,
+  },
+  secondmedia: {
     height: 250,
+    width: 700,
   },
-  center: {
-    justifyContent: 'center',
+  secondcardcontent: {
+    height: 400,
+    width: 700,
   },
+  secondcardstyle: {
+    justifyContent: 'space-evenly',
+  },
+  secondbutton: {
+    paddingLeft: 8,
+  }
+
 });
 
 export default function ProjectPage(){
@@ -30,75 +48,76 @@ export default function ProjectPage(){
 
     return (
       /*More about me*/
-      <CardActions className={classes.center}>
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image="S&P500vsAMD.png"
-              title="S&P500vsAMD"
-            />
+      <div>
+        <Card className={classes.maincardcontent}>
+          <CardActionArea >
+            <Link href="https://github.com/johnsonchau7/sp500vsAMD" target="_blank">
+              <CardMedia className={classes.mainmedia} image="S&P500vsAMD.png" title="S&P500vsAMD"></CardMedia >
+            </Link>
+          </CardActionArea>
+          <CardActions className={classes.maincarddescription}>
             <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
+              <Typography gutterBottom variant="h4" component="h2" align="justify">
                 S&P500 vs AMD Data Project
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography variant="h6" color="textSecondary" component="p" align="justify">
                 Personal data project for explaining relationship between S&P500 and AMD between 2018 to 2019
               </Typography>
             </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary" href="https://github.com/johnsonchau7/sp500vsAMD" target="_blank">
+            <Button size="big" color="primary" href="https://github.com/johnsonchau7/sp500vsAMD" target="_blank" className={classes.mainbutton}>
               Learn More
             </Button>
-          </CardActions>
 
-        </Card>
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image="Sust.png"
-              title="Sust"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                Sust - Empowering Sustainablity
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                A sustainable food web app where users can make recipes from their left-over ingredients
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary" href="https://github.com/johnsonchau7/AccentureBootcamp" target="_blank">
-              Learn More
-            </Button>
           </CardActions>
         </Card>
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image="FameBit.png"
-              title="FameBit"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                FameBit - Marketing Made Easier
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                A business strategy proposal to evolve Google's existing marketing platform, Famebit, by targeting SMBs
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary" href="https://github.com/johnsonchau7/GoogleCaseComp2020" target="_blank">
-              Learn More
-            </Button>
+
+
+        <div>
+          <CardActions className={classes.secondcardstyle}>
+            <Card className={classes.secondcardcontent}>
+              <CardActionArea>
+                <Link href="https://github.com/johnsonchau7/AccentureBootcamp" target="_blank">
+                  <CardMedia className={classes.secondmedia} image="Sust.png" title="Sust"></CardMedia>
+                </Link>
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Sust - Empowering Sustainablity
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    A sustainable food web application where users can make recipes from their left-over ingredients and view their ecological impact
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" color="primary" href="https://github.com/johnsonchau7/AccentureBootcamp" target="_blank" className={classes.secondbutton}>
+                  Learn More
+                </Button>
+              </CardActions>
+            </Card>
+
+            <Card className={classes.secondcardcontent}>
+              <CardActionArea>
+                <Link href="https://github.com/johnsonchau7/GoogleCaseComp2020" target="_blank">
+                  <CardMedia className={classes.secondmedia}image="GoogleCase.png" title="FameBit"></CardMedia>
+                </Link>
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    FameBit - Marketing Made Easier
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    A business strategy proposal to evolve Google's existing marketing platform, Famebit, by targeting SMBs
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" color="primary" href="https://github.com/johnsonchau7/GoogleCaseComp2020" target="_blank" className={classes.secondbutton}>
+                  Learn More
+                </Button>
+              </CardActions>
+            </Card>
           </CardActions>
-        </Card>
-      </CardActions>
+        </div>
+      </div>
 
     );
 }
