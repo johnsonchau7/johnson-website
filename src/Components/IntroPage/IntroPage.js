@@ -91,7 +91,7 @@ export default function IntroPage() {
         <Card className={button_classes.bio}>
           <CardContent>
             <Typography variant="body1" component="p" align="center">
-              A 2nd year Business Analytics and Computer Science student at University of Sydney, Active Programmer <span role="img" aria-label="computer">🖥</span> and Problem Solver <span role="img" aria-label="puzzle">🧩</span>
+              A penultimate Business Analytics and Computer Science student at University of Sydney, Active Programmer <span role="img" aria-label="computer">🖥</span> and Problem Solver <span role="img" aria-label="puzzle">🧩</span>
             </Typography>
           </CardContent>
         </Card>
